@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const date = new Date().toLocaleTimeString();
+
+function App(prop) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='hi'>
+      <div className='hello'>
+        <div className='how'>
+          <img src={prop.profilepic} className='then' />
+          <p className="when">
+            <a className='khan' href={prop.link} target="_blank">{prop.name}</a>
+            <span className='date'>{date}</span>
+          </p>
+        </div>
+        <br />
+        <img src={prop.some} className='ques' />
+        <div>
+          <button className='likeBtn'>Like</button>
+          <button className='cmtBtn'>Comments</button>
+          <button className='shareBtn'>Share</button>
+        </div>
+      </div>
     </div>
   );
 }
+
+
+
 
 export default App;
